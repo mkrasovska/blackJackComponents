@@ -138,8 +138,6 @@ export class AppComponent {
     let takenCard: TCard;
     takenCard = this._takeNewCard(this.playerOne);
     this._writeMessage(`You took ${takenCard.name} ${takenCard.symbol}`);
-    // this.playerOne.score = this._scoreSum(this.playerOne);
-
 
     if (this.playerTwo.isFinished) {
       this.playerOne.isFinished = true;
@@ -168,7 +166,6 @@ export class AppComponent {
     if (!this.playerTwo.isFinished) {
       this._takeNewCard(this.playerTwo);
       this._writeMessage(`Dealer took a card`);
-      // this.playerTwo.score = this._scoreSum(this.playerTwo);
     }
 
     if (this.playerTwo.score > 21) {

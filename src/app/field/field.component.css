@@ -28,7 +28,7 @@
   border: 2px solid grey;
 }
 
-.desision-buttons {
+.decision-buttons {
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -5,22 +5,23 @@
     </p>
 
     <div class="opponent-cards">
-      <img *ngFor="let card of cardsPlayerTwo" [src] = "gameInProgress ? card.back : card.face"/>
+      <img *ngFor="let card of cardsPlayerTwo"
+      [src] = "gameInProgress ? card.back : card.face"/>
     </div>
 
   </div>
 
-  <div class="desision-buttons">
+  <div class="decision-buttons">
     <button class="next-card"
       *ngIf = "gameInProgress"
-      (click) = "takeCard()">
+      (click) = "cardTaken.emit()">
       Pick a card
     </button>
 
     <div class="central-paper">
       <div class="game-welcome">
         <h1>
-          Wellcome <br />
+          Welcome <br />
           to Black Jack game!
         </h1>
 
@@ -30,7 +31,7 @@
 
     <button class="stop-game"
       *ngIf = "gameInProgress"
-      (click) = "stopGame()">
+      (click) = "gameStopped.emit()">
       Stop
     </button>
   </div>

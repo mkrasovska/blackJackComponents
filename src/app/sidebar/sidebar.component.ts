@@ -13,8 +13,4 @@ export class SidebarComponent {
   @Input() public gameInProgress: boolean;
 
   @Output() public gameStarted: EventEmitter<void> = new EventEmitter();
-
-  public startGame(): void {
-    this.gameStarted.emit();
-  }
 }

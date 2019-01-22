@@ -13,13 +13,4 @@ export class FieldComponent {
   @Input() public gameInProgress: boolean;
   @Input() public cardsPlayerOne: TCard[];
   @Input() public cardsPlayerTwo: TCard[];
-
-  public takeCard(): void {
-    this.cardTaken.emit();
-  }
-
-  public stopGame(): void {
-    this.gameStopped.emit();
-  }
-
 }
