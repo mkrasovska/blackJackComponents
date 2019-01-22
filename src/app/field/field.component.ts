@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-field',
@@ -7,20 +7,19 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   host: { class: 'game-field' }
 })
 
-export class FieldComponent implements OnInit {
+export class FieldComponent {
   @Output() public cardTaken: EventEmitter<void> = new EventEmitter();
   @Output() public gameStopped: EventEmitter<void> = new EventEmitter();
   @Input() public gameInProgress: boolean;
   @Input() public cardsPlayerOne: TCard[];
   @Input() public cardsPlayerTwo: TCard[];
 
-  public takeCard() {
+  public takeCard(): void {
     this.cardTaken.emit();
   }
 
-  public stopGame() {
+  public stopGame(): void {
     this.gameStopped.emit();
   }
 
-  ngOnInit() {}
 }

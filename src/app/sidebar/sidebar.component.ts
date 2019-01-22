@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   host: { class: 'side-bar' }
 })
 
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   @Input() public allMessages: string[];
   @Input() public scorePlayerOne: number;
   @Input() public scorePlayerTwo: number;
@@ -15,9 +15,9 @@ export class SidebarComponent implements OnInit {
 
   @Output() public gameStarted: EventEmitter<void> = new EventEmitter();
 
-  public startGame() {
+  public startGame(): void {
     this.gameStarted.emit();
   }
 
-  ngOnInit() {}
+
 }

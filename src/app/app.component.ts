@@ -67,7 +67,6 @@ export class AppComponent {
   }
 
   public nextRound(): void {
-    console.log(this._myDeck);
     this._playerOneRound();
     this._playerTwoRound();
   }
