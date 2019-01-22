@@ -6,7 +6,6 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
   host: { class: 'side-bar' }
 })
-
 export class SidebarComponent {
   @Input() public allMessages: string[];
   @Input() public scorePlayerOne: number;
@@ -18,6 +17,4 @@ export class SidebarComponent {
   public startGame(): void {
     this.gameStarted.emit();
   }
-
-
 }

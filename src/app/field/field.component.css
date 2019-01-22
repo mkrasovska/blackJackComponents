@@ -1,4 +1,4 @@
-.game-field {
+/* .game-field {
   background-color: green;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   width: 80%;
   font-size: 20px;
   font-weight: 600;
-}
+} */
 
 .opponent-cards,
 .your-cards {
